@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/stylesheet.css">
+    <title>Weather Forecast</title>
+</head>
+<body style="background-image: url('../static/assets/h1.jpg'); height: 100vh; background-size: cover; background-repeat: no-repeat;">
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul class="navbar-left">
+            <li><a class="navbar-brand" href="#">Weather Forecast</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href={{url_for()}}>About</a></li>
+            <li><a href="https://github.com/M-MJB/CICD_SmartAPP">Github</a></li>
+        </ul>
+        <ul class="navbar-right">
+            <li><a href="{{ url_for('main.register') }}">Register</a></li>
+            <li><a href="{{ url_for('main.login') }}">Login</a></li>
+   
+        </ul>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="container_box">
+        <div class="title">Enter Your Current Location</div>
+        <div class="search-bar">
+            <form method="POST">
+            <input type="text" class="form-control" name="location" placeholder="Location" required>
+            <button type="submit">
+                <img src="https://emojisup.org/images/emoji/lg/velvet/magnifying-glass-tilted-right@2x.png" alt="Search" style="height: 40px;">
+            </button>
+        </form>
+        </div>
+        <p style="color: aliceblue; text-align: center;">
+            Welcome! Please <a href="{{ url_for('main.login') }}">log in</a> or <a href="{{ url_for('main.register') }}">register</a> to use the AI model.
+        </p>
+    </div>
+</body>
+</html>
