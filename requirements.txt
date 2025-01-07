@@ -5,3 +5,7 @@ pycaret
 sklearn
 pandas
 pickle
+Werkzeug
+pytest
+scikit-learn
+numpy

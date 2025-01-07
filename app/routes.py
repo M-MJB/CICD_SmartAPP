@@ -11,9 +11,6 @@ data=pd.read_csv(r'app/models/Weather_Data.csv')
 main = Blueprint('main', __name__)
 
 
-
-
-# Replace with your actual API key from WeatherAPI.com
 API_KEY = 'your_weatherapi_key_here'
 BASE_URL = 'http://api.weatherapi.com/v1/current.json'
 
